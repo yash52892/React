@@ -1,4 +1,4 @@
-function ExpenseItem(){
+const ExpenseItem = (props) =>{
     const ExpItem="Food";
     const ExpPrice=20;
     const LocationOfExpenditure= 'Mysuru';
