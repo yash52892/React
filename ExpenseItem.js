@@ -1,13 +1,13 @@
-function ExpenseItem(){
-    const ExpItem="Food";
-    const ExpPrice=20;
-    const LocationOfExpenditure= 'Mysuru';
-    return(
-        <div>
-        <h2>ExpenseItem!</h2>
-        <h3>{ExpItem} Rs.{ExpPrice} {LocationOfExpenditure}</h3>
-        </div>
-    )
-}
+import "./ExpenseItem.css";
+import ExpenseDate from "./ExpenseDate";
+import ExpenseDetails from "./ExpenseDetails";
 
-export default ExpenseItem
+function ExpenseItem(props){
+  return (
+    <div className="expense-item">
+      <ExpenseDate date={props.date}></ExpenseDate>    
+      <ExpenseDetails amount={props.amount}  location={props.location}   title={props.title} ></ExpenseDetails>
+    </div>
+  )
+}
+export default ExpenseItem;
