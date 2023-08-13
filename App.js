@@ -1,6 +1,7 @@
 import ExpenseItem from "./components/Expense/ExpenseItem"
-import ExpenseForm from "./components/Expense/ExpenseForm";
-//import expenses from "./data";
+import New_expense from "./components/New_expense/Newexpense.js";
+import "./components/New_expense/ExpenseForm.css"
+
 
 const App = () =>{
   const expenses = [
@@ -28,7 +29,7 @@ const App = () =>{
   ];
   return (
     <div id="List">
-    <ExpenseForm></ExpenseForm>
+    <New_expense></New_expense>
     <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date} location={expenses[0].location} id={expenses[0].id}></ExpenseItem>
     <ExpenseItem title={expenses[1].title} amount={expenses[1].amount} date={expenses[1].date} location={expenses[1].location} id={expenses[1].id}></ExpenseItem>
     <ExpenseItem title={expenses[2].title} amount={expenses[2].amount} date={expenses[2].date} location={expenses[2].location} id={expenses[2].id}></ExpenseItem>
