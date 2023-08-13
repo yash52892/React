@@ -1,7 +1,6 @@
 import "./ExpenseForm.css"
 import React, { useState } from "react";    
-const ExpenseForm = () =>{
-
+const ExpenseForm = (props) =>{
     const [t,udpate_t]= useState('');
     const [a,udpate_a]= useState('');
     const [d,udpate_d]= useState('');
@@ -18,8 +17,17 @@ const ExpenseForm = () =>{
         udpate_d(event.target.value);
      };
       
+     const getsinput =(e) =>{
+        e.preventDefault();
+        const props={
+            title:t,
+            amount:a,
+            date:new Date(d)
+        };
+        console.log(props);
+    };
 return(
-        <form>
+        <form onSubmit={getsinput}>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label className="new-expense__control label">Expense Title</label>
