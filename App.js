@@ -27,6 +27,7 @@ const App = () =>{
       location: 'Shimoga'
     },
   ];
+  
   return (
     <div id="List">
     <New_expense></New_expense>
