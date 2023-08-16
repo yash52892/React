@@ -1,11 +1,18 @@
 import "./Newexpense.css"
 import ExpenseForm from "./ExpenseForm";
-import React, { useState } from "react";
-const New_expense = () =>{
+
+const Newexpense = (props) =>{
+    const addFormHandler =(exp)=>{
+        const newExp={
+            id: Math.random(),
+            ...exp  
+        };
+        props.getData(newExp);
+    }
     return (
     <div className="new-expense">
-    <ExpenseForm></ExpenseForm>
+    <ExpenseForm addForm={addFormHandler}></ExpenseForm>
     </div>
     );
 }
-export default New_expense;
+export default Newexpense;
