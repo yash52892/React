@@ -19,11 +19,8 @@ const Expenses = (props) => {
     <div id='List'>
       <Card className='expenses'>
           <ExpensesFilter seleted={filteredYear} onChangeFilter={filterChangeHandler}/>
-          {
-          (checkItem.length>1)?(checkItem.map((item) => <ExpenseItem key={item.id} title={item.title} amount={item.amount} date={item.date} location={item.location}/>
-            )):<div> Only single Expense here. Please add more... </div>
-            
-          }
+          <ExpensesChart expenses={checkItem} />
+          <NewExpenseList items={checkItem} />
       </Card>
     </div>
   );
